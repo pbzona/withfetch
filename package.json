@@ -1,6 +1,6 @@
 {
   "name": "@pbzona/withfetch",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Composable fetch instances with preset headers",
   "type": "module",
   "publishConfig": {
