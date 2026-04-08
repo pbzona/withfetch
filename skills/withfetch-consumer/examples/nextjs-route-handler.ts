@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { accept, bearerFromEnv, createFetch, headerFromEnv } from "withfetch";
+import { accept, bearerFromEnv, createFetch, headerFromEnv } from "@pbzona/withfetch";
 
 const upstreamFetch = createFetch(
 	accept("application/json"),

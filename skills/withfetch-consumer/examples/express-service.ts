@@ -1,6 +1,6 @@
 import { randomUUID } from "node:crypto";
 import express from "express";
-import { basicFromEnv, createFetch, userAgent } from "withfetch";
+import { basicFromEnv, createFetch, userAgent } from "@pbzona/withfetch";
 
 const billingFetch = createFetch(
 	userAgent("billing-proxy/1.0"),

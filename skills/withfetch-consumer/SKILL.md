@@ -1,11 +1,11 @@
 ---
 name: withfetch-consumer
-description: Integrate withfetch into Node or server-side TypeScript projects by creating reusable fetch clients with env-driven headers and auth middleware.
+description: Integrate @pbzona/withfetch into Node or server-side TypeScript projects by creating reusable fetch clients with env-driven headers and auth middleware.
 ---
 
 # withfetch Consumer
 
-Use this skill to wire `withfetch` into an existing codebase so application code uses configured `fetch` clients instead of repeating headers and auth logic.
+Use this skill to wire `@pbzona/withfetch` into an existing codebase so application code uses configured `fetch` clients instead of repeating headers and auth logic.
 
 ## When To Use This Skill
 
@@ -30,7 +30,7 @@ Use when the user asks to:
 Default to this pattern unless the repository already has a stronger convention:
 
 ```ts
-import { bearerFromEnv, createFetch, headerFromEnv } from "withfetch";
+import { bearerFromEnv, createFetch, headerFromEnv } from "@pbzona/withfetch";
 
 export const apiFetch = createFetch(
   headerFromEnv("X-Api-Key", "API_KEY"),
@@ -74,10 +74,10 @@ const res = await apiFetch("https://api.example.com/users", {
 
 ```bash
 # Install dependency in target project
-pnpm add withfetch
+pnpm add @pbzona/withfetch
 
 # If the project uses npm
-npm install withfetch
+npm install @pbzona/withfetch
 ```
 
 ```bash

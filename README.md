@@ -5,13 +5,13 @@ Composable `fetch` instances with preset headers. Create configured fetch functi
 ## Install
 
 ```bash
-npm install withfetch
+npm install @pbzona/withfetch
 ```
 
 ## Usage
 
 ```typescript
-import { createFetch, header, headerFromEnv, bearer } from "withfetch";
+import { createFetch, header, headerFromEnv, bearer } from "@pbzona/withfetch";
 
 const api = createFetch(
   headerFromEnv("X-Api-Key", "API_KEY"),
@@ -95,7 +95,7 @@ createFetch(
 Reads the `VERCEL_OIDC_TOKEN` environment variable and sets it as a Bearer token. Useful for authenticating between Vercel-hosted services.
 
 ```typescript
-import { createFetch, vercelOidc } from "withfetch";
+import { createFetch, vercelOidc } from "@pbzona/withfetch";
 
 // Simple: reads VERCEL_OIDC_TOKEN env var
 const api = createFetch(vercelOidc());

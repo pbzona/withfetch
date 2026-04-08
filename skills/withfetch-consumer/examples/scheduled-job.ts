@@ -1,4 +1,4 @@
-import { createFetch, headerFromEnv, vercelOidc } from "withfetch";
+import { createFetch, headerFromEnv, vercelOidc } from "@pbzona/withfetch";
 
 const internalFetch = createFetch(
 	headerFromEnv("X-Service-Name", "SERVICE_NAME", { optional: true }),
