@@ -135,7 +135,8 @@ This repo includes a GitHub Actions publish workflow at `.github/workflows/publi
 
 ### One-time setup
 
-1. Add an `NPM_TOKEN` repository secret with publish access to this package.
+1. Configure npm Trusted Publishing for this package and this GitHub workflow.
+2. Ensure workflow permissions include `id-token: write` (already configured).
 
 ### Release flow
 
@@ -146,7 +147,7 @@ npm version patch
 git push --follow-tags
 ```
 
-2. The workflow runs on `v*` tags, validates lint/typecheck/tests/build, verifies tag version matches `package.json`, then publishes to npm.
+2. The workflow runs on `v*` tags, validates lint/typecheck/tests/build, verifies tag version matches `package.json`, then publishes to npm with provenance.
 
 ## Agent Skill
 
